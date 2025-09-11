@@ -5,9 +5,13 @@ import coursesTitleArray from "./components/coursesTitle.tsx";
 function App() {
   return (
     <>
+      <ul>
+
       {
-        coursesTitleArray.map(value => <li>{value}</li>)
+        coursesTitleArray.map((value, index) => <li key={index}>{value}</li>)
       }
+
+      </ul>
     </>
   )
 }
