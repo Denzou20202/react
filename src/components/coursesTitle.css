@@ -1,0 +1,10 @@
+li {
+  gap: 30px;
+  font-size: 20px;
+
+  &:hover {
+    font-weight: bold;
+    color: coral;
+    cursor: pointer;
+  }
+}
