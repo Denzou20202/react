@@ -1,0 +1,14 @@
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  color: green;
+}
+
+div {
+  border: 1px solid green;
+  padding: 10px;
+}
