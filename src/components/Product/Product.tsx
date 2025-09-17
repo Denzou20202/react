@@ -46,7 +46,7 @@ export const Product:FC<PropsProduct> = (
           <p>Create: {meta.createdAt}</p>
           <p>Update: {meta.updatedAt}</p>
           <p>Code: {meta.barcode}</p>
-          <img src={meta.qrCode}/>
+          <img src={meta.qrCode} alt="qrCode"/>
           <p>Warranty: {warrantyInformation}</p>
           <p>Shipping: {shippingInformation}</p>
           <p>Availability: {availabilityStatus}</p>
