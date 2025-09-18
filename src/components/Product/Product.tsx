@@ -1,6 +1,8 @@
 import {type FC, useState} from "react";
 import type {IProduct} from "../../models/IProduct.tsx";
-import "./ProductStyle.css"
+import "../../styles/ProductStyle.css"
+import {Review} from "../Review/Review.tsx";
+
 type PropsProduct = {
   product: IProduct
 }
@@ -18,7 +20,10 @@ export const Product:FC<PropsProduct> = (
     warrantyInformation,
     shippingInformation,
     availabilityStatus,
-    rating
+    rating,
+    reviews,
+    images,
+    dimensions
   }}) => {
   const [open, setOpen] = useState(false)
   return (
@@ -35,21 +40,50 @@ export const Product:FC<PropsProduct> = (
       >
         More info
       </button>
-      <p>#{tags[0]}, #{tags[1]}</p>
+      <div className="tags">
+        {
+          tags.map((tag, index) => (
+            <p key={index}>#{tag}</p>
+          ))
+        }
+      </div>
       <div className={`overlay animated ${open ? 'show' : ''}`}>
         <div className="modal">
           <svg height="200" viewBox="0 0 200 200" width="200" onClick={() => setOpen(false)}>
             <title />
             <path d="M114,100l49-49a9.9,9.9,0,0,0-14-14L100,86,51,37A9.9,9.9,0,0,0,37,51l49,49L37,149a9.9,9.9,0,0,0,14,14l49-49,49,49a9.9,9.9,0,0,0,14-14Z" />
           </svg>
-          <p>Description: {description}</p>
-          <p>Create: {meta.createdAt}</p>
-          <p>Update: {meta.updatedAt}</p>
-          <p>Code: {meta.barcode}</p>
-          <img src={meta.qrCode} alt="qrCode"/>
-          <p>Warranty: {warrantyInformation}</p>
-          <p>Shipping: {shippingInformation}</p>
-          <p>Availability: {availabilityStatus}</p>
+          <div className="images_list">
+            {
+              images.map((image, index) => (
+                <img className="img_list" src={image} key={index}
+                  alt={title}
+                />
+              ))
+            }
+          </div>
+          <div className="info_list">
+            <p>Code: {meta.barcode}</p>
+            <img className="code_img" src={meta.qrCode} alt="qrCode"/>
+            <p>Create: {meta.createdAt}</p>
+            <p>Update: {meta.updatedAt}</p>
+            <p>Description: {description}</p>
+            <p>Warranty: {warrantyInformation}</p>
+            <p>Shipping: {shippingInformation}</p>
+            <p>Availability: {availabilityStatus}</p>
+                <ul>
+                  <li>Width: {dimensions.width}</li>
+                  <li>Height: {dimensions.height}</li>
+                  <li>Depth: {dimensions.depth}</li>
+                </ul>
+          </div>
+
+          <div className="reviews_list">
+            <hr/>
+            {
+              reviews.map((review, index) => <Review review={review} key={index}/>)
+            }
+          </div>
         </div>
       </div>
 

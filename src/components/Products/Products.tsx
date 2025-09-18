@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import type {IProduct} from "../../models/IProduct.tsx";
 import {loadProducts} from "../../services/api.service.ts";
 import {Product} from "../Product/Product.tsx";
-import "./ProductsStyle.css"
+import "../../styles/ProductsStyle.css"
 
 
 export const Products = () => {
@@ -36,16 +36,14 @@ export const Products = () => {
     <div>
       <h1>Products</h1>
       <div className='main'>
-
         {
           currentProducts.map(product => <Product product={product} key={product.id}/>)
         }
-
-        <div className="pagination">
-          <button onClick={handlePrev} disabled={currentPage === 1}>← Prev</button>
-          <span>Page {currentPage} of {totalPages}</span>
-          <button onClick={handleNext} disabled={currentPage === totalPages}>Next →</button>
-        </div>
+      </div>
+      <div className="pagination">
+        <button onClick={handlePrev} disabled={currentPage === 1}>← Prev</button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button onClick={handleNext} disabled={currentPage === totalPages}>Next →</button>
       </div>
     </div>
   );
