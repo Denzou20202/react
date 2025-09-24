@@ -1,7 +1,11 @@
-const CommentsJsonPlaceholder = () => {
-  return (
-    <h2>Comments from JSONPlaceholder</h2>
-  );
-};
+import DataFetcher from "../service/api.services.tsx";
 
-export default CommentsJsonPlaceholder;
+export default function CommentsJsonPlaceholder () {
+  return (
+    <div style={{marginTop: '50px'}}>
+    <h2>Comments from JSONPlaceholder</h2>
+      <DataFetcher url="https://jsonplaceholder.typicode.com/comments"/>
+
+    </div>
+  )
+}

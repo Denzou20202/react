@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Menu/>
-      Main page
+      <hr/>
       <Outlet/>
 
     </>
