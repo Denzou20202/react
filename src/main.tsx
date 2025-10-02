@@ -17,15 +17,15 @@ createRoot(document.getElementById('root')!)
     <Routes>
       <Route path={"/"} element={<App/>}>
         <Route path="/users" element={<UsersPage/>}>
-          <Route path="/users/jsonplaceholder" element={<UsersJsonPlaceholder />} />
-          <Route path="/users/dummyjson" element={<UsersDummyJson />} />
+          <Route path="jsonplaceholder" element={<UsersJsonPlaceholder />} />
+          <Route path="dummyjson" element={<UsersDummyJson />} />
         </Route>
         <Route path="/posts" element={<PostsPage/>}>
-          <Route path="/posts/jsonplaceholder" element={<PostsJsonPlaceholder />} />
-          <Route path="/posts/dummyjson" element={<PostsDummyJson />} />
+          <Route path="jsonplaceholder" element={<PostsJsonPlaceholder />} />
+          <Route path="dummyjson" element={<PostsDummyJson />} />
         </Route>
         <Route path="/comments" element={<CommentsPage/>}>
-          <Route path="/comments/jsonplaceholder" element={<CommentsJsonPlaceholder />} />
+          <Route path="jsonplaceholder" element={<CommentsJsonPlaceholder />} />
         </Route>
       </Route>
     </Routes>
