@@ -7,5 +7,6 @@ export default function UsersJsonPlaceholder() {
       <h2>Users from JSONPlaceholder</h2>
       <DataFetcher url="https://jsonplaceholder.typicode.com/users" />;
     </div>
+
     )
 }

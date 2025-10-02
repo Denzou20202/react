@@ -7,7 +7,7 @@ type UrlProps = {
 export default function DataFetcher({ url }: UrlProps) {
   const [data, setData] = useState<unknown[]>([])
 
-  useEffect( () => {
+ useEffect( () => {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
