@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 export const PostsPage = () => {
   return (
@@ -8,6 +8,7 @@ export const PostsPage = () => {
         <li><Link to="/posts/jsonplaceholder">JsonPlaceholder</Link></li>
         <li><Link to="/posts/dummyjson">DummyJson</Link></li>
       </ul>
+      <Outlet/>
     </div>
   );
 };
