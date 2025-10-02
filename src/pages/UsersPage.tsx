@@ -10,7 +10,7 @@ export const UsersPage = () => {
     <UsersComponent/>
       <hr/>
       <CartsComponents/>
-      <Outlet/>
+    
     </>
   );
 };
