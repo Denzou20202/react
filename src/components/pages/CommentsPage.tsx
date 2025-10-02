@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 export const CommentsPage = () => {
   return (
@@ -7,6 +7,7 @@ export const CommentsPage = () => {
       <ul>
         <li><Link to="/comments/jsonplaceholder">JsonPlaceholder</Link></li>
       </ul>
+      <Outlet/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 export const UsersPage = () => {
   return (
@@ -8,6 +8,7 @@ export const UsersPage = () => {
         <li><Link to="/users/jsonplaceholder">JsonPlaceholder</Link></li>
         <li><Link to="/users/dummyjson">DummyJson</Link></li>
       </ul>
+      <Outlet/>
     </div>
   );
 };
