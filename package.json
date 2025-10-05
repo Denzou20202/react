@@ -14,7 +14,11 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.1",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "react-hook-form": "^7.64.0",
+    "joi": "^18.0.1",
+    "@hookform/resolvers": "^5.2.2",
+    "axios": "^1.12.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
