@@ -6,3 +6,5 @@
 6. Add to package-json - "joi": "^18.0.1"
 7. Add to package-json - "@hookform/resolvers": "^5.2.2"
 8. Add to package-json - "axios": "^1.12.2"
+9. Create new branch Lesson_7/HW_7.1
+10. Done HW_7.1
