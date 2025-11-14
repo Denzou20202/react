@@ -18,7 +18,9 @@
     "react-hook-form": "^7.64.0",
     "joi": "^18.0.1",
     "@hookform/resolvers": "^5.2.2",
-    "axios": "^1.12.2"
+    "axios": "^1.12.2",
+    "@reduxjs/toolkit": "^2.9.2",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
@@ -31,6 +33,6 @@
     "globals": "^16.3.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2"
+    "vite": "^7.1.12"
   }
 }

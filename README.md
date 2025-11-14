@@ -6,3 +6,7 @@
 6. Add to package-json - "joi": "^18.0.1"
 7. Add to package-json - "@hookform/resolvers": "^5.2.2"
 8. Add to package-json - "axios": "^1.12.2"
+9. Add to package-json - "@reduxjs/toolkit": "^2.9.2",
+10. Add to package-json - "react-redux": "^9.2.0"
+11. Creat new branch HW_8.0
+12. Done HW_8.0
